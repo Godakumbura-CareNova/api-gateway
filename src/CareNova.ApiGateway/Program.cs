@@ -9,8 +9,6 @@ builder.Services.AddOcelot(builder.Configuration);
 
 var app = builder.Build();
 
-app.MapGet("/health", () => Results.Ok(new { status = "healthy", service = "api-gateway" }));
-
 await app.UseOcelot();
 
 app.Run();
