@@ -9,11 +9,11 @@
           "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/user-auth/{everything}",
+      "UpstreamPathTemplate": "/auth/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://carenova-gateway.azurewebsites.net"
+    "BaseUrl": "https://carenova-gateway-cwa9etfmdtgvazgm.centralindia-01.azurewebsites.net"
   }
 }
