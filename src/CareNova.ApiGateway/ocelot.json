@@ -1,4 +1,19 @@
 {
-  "Routes": [],
-  "GlobalConfiguration": {}
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Auth/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "carenova-user-auth-b2h0dzajgqahgshn.centralindia-01.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://carenova-gateway-cwa9etfmdtgvazgm.centralindia-01.azurewebsites.net"
+  }
 }
