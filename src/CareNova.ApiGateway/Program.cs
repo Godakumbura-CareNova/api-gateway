@@ -9,7 +9,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("FrontendPolicy", policy =>
     {
-        policy.WithOrigins("http://localhost:3000")
+        policy.WithOrigins("http://localhost:3000", "https://carenova-frontend-avh6beggfqapfjfb.centralindia-01.azurewebsites.net")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
