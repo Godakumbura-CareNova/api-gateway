@@ -77,6 +77,18 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
+          "Host": "doctor-payment-service-ahhyd7eeguhhd0eb.centralindia-01.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/doctor-payment/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
           "Host": "carenova-pharmacy-order-aegsa8hxffcqephb.centralindia-01.azurewebsites.net",
           "Port": 443
         }
