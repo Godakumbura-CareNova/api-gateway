@@ -1,5 +1,6 @@
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +10,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("FrontendPolicy", policy =>
     {
-        policy.WithOrigins("http://localhost:3000", "https://carenova-frontend-avh6beggfqapfjfb.centralindia-01.azurewebsites.net")
+        policy.WithOrigins(
+                "http://localhost:3000",
+                "https://carenova-frontend-avh6beggfqapfjfb.centralindia-01.azurewebsites.net")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
@@ -20,6 +23,10 @@ builder.Services.AddOcelot(builder.Configuration);
 var app = builder.Build();
 
 app.UseCors("FrontendPolicy");
+
+app.UseHttpMetrics();
+
+app.UseMetricServer();
 
 await app.UseOcelot();
 
