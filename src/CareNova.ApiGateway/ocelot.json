@@ -73,7 +73,7 @@
       "UpstreamHttpMethod": [ "GET", "OPTIONS" ]
     },
     {
-      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamPathTemplate": "/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
