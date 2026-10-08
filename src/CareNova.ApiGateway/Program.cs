@@ -5,6 +5,9 @@ using Prometheus;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
+builder.Configuration.AddEnvironmentVariables();
+builder.Configuration.AddCommandLine(args);
+CareNova.ApiGateway.Configuration.PublicContentRouting.Configure(builder.Configuration, builder.Environment.IsDevelopment());
 
 builder.Services.AddCors(options =>
 {
