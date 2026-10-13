@@ -1,0 +1,33 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "carenova-api-gateway"
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets: ["carenova-gateway-cwa9etfmdtgvazgm.centralindia-01.azurewebsites.net"]
+
+  - job_name: "carenova-appointment-integration"
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets: ["carenova-appointment-integration.azurewebsites.net"]
+
+  - job_name: "carenova-doctor-payment"
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets: ["doctor-payment-service-ahhyd7eeguhhd0eb.centralindia-01.azurewebsites.net"]
+
+  - job_name: "carenova-pharmacy-order"
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets: ["carenova-pharmacy-order-aegsa8hxffcqephb.centralindia-01.azurewebsites.net"]
+
+  - job_name: "carenova-user-auth"
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets: ["carenova-user-auth-b2h0dzajgqahgshn.centralindia-01.azurewebsites.net"]
