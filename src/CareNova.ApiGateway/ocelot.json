@@ -85,6 +85,18 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS" ]
     },
     {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "carenova-appointment-integration.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/appointment/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS" ]
+    },
+    {
       "DownstreamPathTemplate": "/api/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
