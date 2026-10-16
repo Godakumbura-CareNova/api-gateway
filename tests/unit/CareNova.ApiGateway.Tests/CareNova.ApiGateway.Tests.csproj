@@ -17,6 +17,7 @@
   <ItemGroup>
     <Using Include="Xunit" />
     <ProjectReference Include="../../../src/CareNova.ApiGateway/CareNova.ApiGateway.csproj" />
+    <None Include="../../../src/CareNova.ApiGateway/ocelot.json" Link="ocelot.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>
